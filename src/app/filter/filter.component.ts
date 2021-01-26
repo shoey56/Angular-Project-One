@@ -9,6 +9,7 @@ import { RecipesService } from '../recipes.service';
 export class FilterComponent implements OnInit {
 
     public foodSearch:string = "";
+    public foodServing: number = 0;
 
   getFilteredResults(): void {
    this.RecipeAPI.getRecipes(this.foodSearch);

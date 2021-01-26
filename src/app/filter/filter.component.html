@@ -1,8 +1,21 @@
-<!-- Search Input -->
-<input [(ngModel)]="foodSearch" placeholder="Search for Recipes" class="filter">
-<button (click)="getFilteredResults()">Search</button>
-
-<!-- meal type -->
-
-
-<!-- health labels -->
+<form>
+    <!-- Search Input -->
+    <div>
+        <input [(ngModel)]="foodSearch" placeholder="Search for Recipes" class="filter">
+    </div>
+    <!-- Serving Size -->
+    <div>
+        <input [(ngModel)]="foodServing" placeholder="Serving Size" class="serving">
+    </div>
+    <!-- health labels -->
+    <h2>Dietary Preference</h2>
+    <input type="checkbox" name="lowCarb" value="lowCarb">
+    <label for="lowCarb">low-carb</label><br>
+    <input type="checkbox" name="vegetarian" value="vegetarian">
+    <label for="vegetarian">vegetarian</label><br>
+    <input type="checkbox" name="peanutFree" value="peanutFree">
+    <label for="peanutFree">peanut-free</label><br><br>
+    
+    <button (click)="getFilteredResults()">Search</button>
+    
+</form>
