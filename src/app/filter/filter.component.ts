@@ -10,9 +10,22 @@ export class FilterComponent implements OnInit {
 
     public foodSearch:string = "";
     public foodServing: number = 0;
+    public lowCarb: boolean = true;
+    public vegetarian: boolean = true;
+    public peanutFree: boolean = true;
 
   getFilteredResults(): void {
-   this.RecipeAPI.getRecipes(this.foodSearch);
+    const diet: string [] = [];
+    if (this.lowCarb) {
+      diet.push('low-carb')
+    } 
+    if (this.vegetarian) {
+      diet.push('vegetarian')
+    } 
+    if (this.peanutFree) {
+      diet.push('peanutFree')
+    } 
+   this.RecipeAPI.getRecipes(this.foodSearch, diet);
   }
 
   constructor(public RecipeAPI: RecipesService) { }
