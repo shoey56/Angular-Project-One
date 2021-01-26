@@ -1,19 +1,22 @@
 <form>
     <!-- Search Input -->
+    <h1>Search for Recipes</h1>
     <div>
-        <input [(ngModel)]="foodSearch" placeholder="Search for Recipes" class="filter">
+        <input [(ngModel)]="foodSearch" placeholder="Search for Recipes" class="filter" name="search">
     </div>
-    <!-- Serving Size -->
+    <!-- Max Ingredients -->
+    <h2>Filter By:</h2>
+    <h3>Maximum Number of Ingredients</h3>
     <div>
-        <input [(ngModel)]="foodServing" placeholder="Serving Size" class="serving">
+        <input [(ngModel)]="ingredients" placeholder="Max Ingredients" class="ingredients" name="ingredients">
     </div>
     <!-- health labels -->
-    <h2>Dietary Preference</h2>
-    <input type="checkbox" name="lowCarb" value="lowCarb">
+    <h3>Dietary Preference</h3>
+    <input [(ngModel)]="lowCarb" type="checkbox" name="lowCarb" value="lowCarb">
     <label for="lowCarb">low-carb</label><br>
-    <input type="checkbox" name="vegetarian" value="vegetarian">
+    <input [(ngModel)]="vegetarian" type="checkbox" name="vegetarian" value="vegetarian">
     <label for="vegetarian">vegetarian</label><br>
-    <input type="checkbox" name="peanutFree" value="peanutFree">
+    <input [(ngModel)]="peanutFree" type="checkbox" name="peanutFree" value="peanutFree">
     <label for="peanutFree">peanut-free</label><br><br>
     
     <button (click)="getFilteredResults()">Search</button>
