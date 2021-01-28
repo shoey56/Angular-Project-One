@@ -12,12 +12,12 @@
     </div>
     <!-- health labels -->
     <h3>Dietary Preference</h3>
-    <input [(ngModel)]="lowCarb" type="checkbox" name="lowCarb" value="lowCarb">
-    <label for="lowCarb">low-carb</label><br>
+    <input [(ngModel)]="peanutFree" type="checkbox" name="peanutFree" value="peanutFree">
+    <label for="peanutFree">peanut-free</label><br>
     <input [(ngModel)]="vegetarian" type="checkbox" name="vegetarian" value="vegetarian">
     <label for="vegetarian">vegetarian</label><br>
-    <input [(ngModel)]="peanutFree" type="checkbox" name="peanutFree" value="peanutFree">
-    <label for="peanutFree">peanut-free</label><br><br>
+    <input [(ngModel)]="vegan" type="checkbox" name="vegan" value="vegan">
+    <label for="vegan">vegan</label><br><br>
     
     <button (click)="getFilteredResults()">Search</button>
     

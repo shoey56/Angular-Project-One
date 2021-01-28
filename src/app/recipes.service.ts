@@ -21,14 +21,14 @@ export class RecipesService {
   recipes: any[];
   constructor(private http: HttpClient) {}
 
-  getRecipes(search, diet: string []) {
+  getRecipes(search, ingredients, diet: string []) {
     console.log(search);
     let health = "";
     for (let item of diet) {
-      health += "&diet=" + item
+      health += "&health=" + item
     }
     const requestUrl =
-      this.getUrlWithAPIKey() + "&q=" + search + "&ingr=8" + health; // add whatever params you want from here: https://developers.themoviedb.org/3/discover/movie-discover
+      this.getUrlWithAPIKey() + "&q=" + search + "&ingr=" + ingredients + health; // add whatever params you want from here: https://developers.themoviedb.org/3/discover/movie-discover
 
     this.http.get(requestUrl).subscribe(
       (response: any) => {

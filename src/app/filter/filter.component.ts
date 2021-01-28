@@ -9,23 +9,23 @@ import { RecipesService } from '../recipes.service';
 export class FilterComponent implements OnInit {
 
     public foodSearch:string = "";
-    public foodServing: number = 0;
-    public lowCarb: boolean = true;
-    public vegetarian: boolean = true;
-    public peanutFree: boolean = true;
+    public ingredients: number = 10;
+    public peanutFree: boolean = false;
+    public vegetarian: boolean = false;
+    public vegan: boolean = false;
 
   getFilteredResults(): void {
     const diet: string [] = [];
-    if (this.lowCarb) {
-      diet.push('low-carb')
+    if (this.peanutFree) {
+      diet.push('peanut-free')
     } 
     if (this.vegetarian) {
       diet.push('vegetarian')
     } 
-    if (this.peanutFree) {
-      diet.push('peanutFree')
+    if (this.vegan) {
+      diet.push('vegan')
     } 
-   this.RecipeAPI.getRecipes(this.foodSearch, diet);
+   this.RecipeAPI.getRecipes(this.foodSearch, this.ingredients, diet);
   }
 
   constructor(public RecipeAPI: RecipesService) { }
