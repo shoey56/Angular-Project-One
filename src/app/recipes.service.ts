@@ -19,6 +19,7 @@ export class RecipesService {
   appId = "3096e7e1";
   url = "https://api.edamam.com/search";
   recipes: any[];
+  favorites: any[] = [];
   constructor(private http: HttpClient) {}
 
   getRecipes(search, ingredients, diet: string []) {

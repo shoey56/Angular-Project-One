@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../recipes.service';
 
+interface Favorites {
+  label: string;
+  image: string;
+  url: string;
+}
+
 
 @Component({
   selector: 'app-recipes-component',
@@ -9,15 +15,14 @@ import { RecipesService } from '../recipes.service';
 })
 export class RecipesComponentComponent implements OnInit {
 
-  // public foodSearch:string = "";
+  
+addFavorite = function (favorites: Favorites): void {
+    this.RecipeAPI.favorites.push({ label: favorites.label, image: favorites.image, url: favorites.url });
+    console.log(this.RecipeAPI.favorites);
+  }
 
-  // getFilteredResults(): RecipesService {
-  //   // return this.RecipeAPI.filter((todo => {
-  //   //   return todo.task.toLowerCase().includes(this.filterString.toLowerCase());
-  //   // }));
-  // }
-
-
+  
+  
 
   constructor(public RecipeAPI: RecipesService) { }
 

@@ -1,5 +1,8 @@
+<app-filter></app-filter>
+
 <div *ngFor="let recipe of RecipeAPI.recipes">
     <h3>{{recipe.recipe.label}}</h3>
     <img src = {{recipe.recipe.image}}/>
     <a target=”_blank” href= {{recipe.recipe.url}}>Click here for recipe</a>
+    <button (click)="addFavorite(recipe.recipe)">Add to Favorites</button>
 </div>

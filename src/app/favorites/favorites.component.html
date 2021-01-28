@@ -1,1 +1,8 @@
-<p>favorites works!</p>
+<h1>Favorites List</h1>
+
+<div *ngFor="let recipe of RecipeAPI.favorites; let i = index">
+    <h3>{{recipe.label}}</h3>
+    <img src = {{recipe.image}}/>
+    <a target=”_blank” href= {{recipe.url}}>Click here for recipe</a>
+    <button (click)="removeFavorite(i)">Remove from Favorites</button>
+</div>
