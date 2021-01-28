@@ -1,8 +1,11 @@
 <app-filter></app-filter>
 
-<div *ngFor="let recipe of RecipeAPI.recipes">
+<div *ngFor="let recipe of RecipeAPI.recipes; let i = index">
     <h3>{{recipe.recipe.label}}</h3>
     <img src = {{recipe.recipe.image}}/>
-    <a target=”_blank” href= {{recipe.recipe.url}}>Click here for recipe</a>
+    <p *ngIf="showingDetails">Yield: {{ recipe.recipe.yield }}</p>
+    <!-- <button *ngIf="!todo.completed" (click)="markComplete(todo)" > Complete </button> {{ todo.task }} -->
+    <button (click)="showDetails(i)" > Show More Details </button> 
+    <a target=”_blank” href= {{recipe.recipe.url}}>Click here for full recipe</a>
     <button (click)="addFavorite(recipe.recipe)">Add to Favorites</button>
 </div>

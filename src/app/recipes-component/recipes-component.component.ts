@@ -7,6 +7,7 @@ interface Favorites {
   url: string;
 }
 
+// const showingDetails: boolean = false;
 
 @Component({
   selector: 'app-recipes-component',
@@ -20,6 +21,13 @@ addFavorite = function (favorites: Favorites): void {
     this.RecipeAPI.favorites.push({ label: favorites.label, image: favorites.image, url: favorites.url });
     console.log(this.RecipeAPI.favorites);
   }
+
+  public showingDetails: boolean = false;
+
+showDetails = function (i): void{
+  console.log(i);
+  this.showingDetails[i] = true
+}
 
   
   
