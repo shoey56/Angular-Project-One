@@ -2,15 +2,41 @@
   display: none;
 }
 
-/* .results{
+.results{
+  padding-left: 40px;
+  padding-top: 40px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+}
 
-} */
 
-
-.container{
+/* .container{
   display: flex;
   flex-direction: column;
   justify-content: center;
+} */
+
+.recipe {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fullRecipe {
+  padding: 10px 0px;
+}
+
+button {
+  width: 170px;
+  border-radius: 15px;
+  background-color: rgb(239, 103, 55);
+  border: none;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 800px) {
+  .results {
+    flex-direction: row;
+  }
 }

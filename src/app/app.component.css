@@ -1,9 +1,9 @@
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: orange;
+  background-color: rgb(239, 103, 55);
   align-items: baseline;
-  padding: 0 5px;
+  padding: 0 40px;
 }
 .links {
   list-style-type: none;
@@ -14,9 +14,9 @@ li {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
   border: black solid 1px;
   border-radius: 10px;
-  padding: 5px;
-  background-color: lightgray;
+  padding: 5px 15px;
+  background-color: rgb(75, 72, 72);
 }

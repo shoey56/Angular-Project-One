@@ -1,8 +1,11 @@
-<h1>Favorites List</h1>
+<h2>Favorites List</h2>
 
-<div *ngFor="let recipe of RecipeAPI.favorites; let i = index">
-    <h3>{{recipe.label}}</h3>
+<div *ngFor="let recipe of RecipeAPI.favorites; let i = index" class='results'>
     <img src = {{recipe.image}}/>
-    <a target=”_blank” href= {{recipe.url}}>Click here for recipe</a>
+    <div class="recipe">
+        <h3>{{recipe.label}}</h3>
+        <a class="fullRecipe" target=”_blank” href= {{recipe.url}}>Click here for recipe</a>
     <button (click)="removeFavorite(i)">Remove from Favorites</button>
+    </div>
+    
 </div>

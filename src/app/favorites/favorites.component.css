@@ -1,0 +1,25 @@
+.results{
+    padding-left: 40px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+.recipe {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fullRecipe {
+    padding: 10px 0px;
+  }
+  
+  button {
+    width: 170px;
+    border-radius: 15px;
+  }
+
+  h2 {
+      padding-left: 40px;
+  }
