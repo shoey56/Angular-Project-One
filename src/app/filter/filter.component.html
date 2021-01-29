@@ -1,6 +1,6 @@
 <form>
     <!-- Search Input -->
-    <h1>Search for Recipes</h1>
+    <h2>Search for Recipes</h2>
     <div>
         <input [(ngModel)]="foodSearch" placeholder="Search for Recipes" class="filter" name="search">
     </div>
@@ -18,7 +18,7 @@
     <label for="vegetarian">vegetarian</label><br>
     <input [(ngModel)]="vegan" type="checkbox" name="vegan" value="vegan">
     <label for="vegan">vegan</label><br><br>
-    
+
     <button (click)="getFilteredResults()">Search</button>
-    
+
 </form>

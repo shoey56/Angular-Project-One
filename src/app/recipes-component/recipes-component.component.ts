@@ -12,32 +12,29 @@ interface Favorites {
 @Component({
   selector: 'app-recipes-component',
   templateUrl: './recipes-component.component.html',
-  styleUrls: ['./recipes-component.component.css']
+  styleUrls: ['./recipes-component.component.css'],
 })
 export class RecipesComponentComponent implements OnInit {
-
-  
-addFavorite = function (favorites: Favorites): void {
-    this.RecipeAPI.favorites.push({ label: favorites.label, image: favorites.image, url: favorites.url });
+  addFavorite = function (favorites: Favorites): void {
+    this.RecipeAPI.favorites.push({
+      label: favorites.label,
+      image: favorites.image,
+      url: favorites.url,
+    });
     console.log(this.RecipeAPI.favorites);
-  }
+  };
 
-  public showingDetails: boolean = false;
+  // public showingDetails: boolean = false;
 
-showDetails = function (i): void{
-  console.log(i);
-  this.showingDetails[i] = true
-}
+  showDetails = function (i: number): void {
+    this.RecipeAPI.recipes[i].showingDetails = true;
 
-  
-  
+  };
+  showLess = function (i: number): void {
+    this.RecipeAPI.recipes[i].showingDetails = false;
+  };
 
-  constructor(public RecipeAPI: RecipesService) { }
+  constructor(public RecipeAPI: RecipesService) {}
 
-  ngOnInit(): void{
-
-  }
-
-  
-
+  ngOnInit(): void {}
 }
