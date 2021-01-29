@@ -1,6 +1,7 @@
-<app-filter></app-filter>
+<div class='container'>
+<app-filter class='filterComponent'></app-filter>
 
-<div *ngFor="let recipe of RecipeAPI.recipes; let i = index">
+<div *ngFor="let recipe of RecipeAPI.recipes; let i = index" class='results'>
   <h3>{{ recipe.recipe.label }}</h3>
   <img src="{{ recipe.recipe.image }}" />
   <div *ngIf="recipe.showingDetails">
@@ -8,14 +9,12 @@
     <p>Calories: {{ recipe.recipe.calories.toFixed(0) }}</p>
     <button (click)="showLess(i)">Show Less Details</button>
   </div>
-  <!-- <button *ngIf="!todo.completed" (click)="markComplete(todo)" > Complete </button> {{ todo.task }} -->
-  <!-- <button (click)="showDetails(i)" [ngClass]="{ hidden: recipe.showDetails.true }">
-    Show More Details
-  </button> -->
-  <button (click)="showDetails(i)">Show More Details</button>
+  <!-- <button *ngIf="!recipe.showingDetails" (click)="showDetails(i)">Show More Details</button> -->
+  <button [ngClass]="{hidden: recipe.showingDetails}" (click)="showDetails(i)">Show More Details</button>
   <a target="”_blank”" href="{{ recipe.recipe.url }}"
     >Click here for full recipe</a
   >
   <button (click)="addFavorite(recipe.recipe)">Add to Favorites</button>
+</div>
 </div>
 <!--  -->

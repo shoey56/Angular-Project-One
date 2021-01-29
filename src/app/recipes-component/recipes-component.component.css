@@ -2,4 +2,15 @@
   display: none;
 }
 
+/* .results{
+  display: flex;
+  flex-wrap: wrap;
 
+} */
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

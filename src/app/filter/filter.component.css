@@ -1,0 +1,20 @@
+/* :host{
+    text-align: center;
+} */
+
+form{
+    text-align: center;
+    background-color: lightgray;
+    width: 75%;
+    /* position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  padding-bottom: 15px;
+  margin: 0 auto;
+}
+
+.filter, .ingredients{
+    height: 25px;
+    width: 250px;
+}
