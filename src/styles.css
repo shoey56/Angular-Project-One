@@ -10,7 +10,7 @@
 
   img {
     border-radius: 15px;
-    width: 400px
+    width: 300px
   }
 
   button {
@@ -19,3 +19,11 @@
     padding: 5px;
     outline: none;
   }
+
+
+  @media only screen and (min-width: 800px) {
+    img {
+        width: 400px
+      }
+  }
+  
