@@ -3,6 +3,7 @@
     padding-top: 40px;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
   }
 
 .recipe {
@@ -22,4 +23,10 @@
 
   h2 {
       padding-left: 40px;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .results {
+      flex-direction: row;
+    }
   }
